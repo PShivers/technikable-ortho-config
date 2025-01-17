@@ -4,14 +4,13 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define BAS_L 0
@@ -42,28 +41,28 @@
 
         base_layer {
             bindings = <
-&kp TAB         &kp W  &kp L     &kp Y  &kp P                   &kp B               &kp Z  &kp F  &kp O         &kp U    &kp SEMI  &kp DEL
-&kp BACKSPACE   &kp C  &kp R     &kp S  &kp T                   &kp G               &kp M  &kp N  &kp E         &kp I    &kp A     &kp SQT
-&kp LEFT_SHIFT  &kp Q  &kp J     &kp V  &kp D                   &kp K               &kp X  &kp H  &kp COMMA     &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                &kp LEFT_WIN     &kp LALT  &mo 2  &mt LEFT_CONTROL SPACE            &lt 1 ENTER   &mo 3         &kp LEFT_WIN       &kp LEFT_WIN
+&kp TAB         &kp W  &kp L         &kp Y     &kp P  &kp B                                &kp Z  &kp F         &kp O         &kp U    &kp SEMI  &kp DEL
+&kp BACKSPACE   &kp C  &kp R         &kp S     &kp T  &kp G                                &kp M  &kp N         &kp E         &kp I    &kp A     &kp SQT
+&kp LEFT_SHIFT  &kp Q  &kp J         &kp V     &kp D  &kp K                                &kp X  &kp H         &kp COMMA     &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                       &kp LEFT_WIN  &kp LALT  &mo 2  &mt LEFT_CONTROL SPACE  &lt 1 ENTER  &mo 3  &kp LEFT_WIN  &kp LEFT_WIN
             >;
         };
 
         nav_layer {
             bindings = <
-&bt BT_CLR      &bootloader   &trans          &mmv MOVE_UP    &trans           &trans                &trans              &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN  &trans         &kp DEL
-&bt BT_CLR_ALL  &bl BL_TOG    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                &kp LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT)  &trans
-&trans          &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4          &trans              &kp HOME        &kp INSERT      &kp END        &trans         &trans
-                &trans        &trans          &trans          &trans                         &trans                      &trans          &trans          &trans
+&trans  &bootloader     &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans                   &trans              &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN  &trans         &kp DEL
+&trans  &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT          &kp LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT)  &trans
+&trans  &trans          &trans          &trans          &trans           &trans                   &trans              &kp HOME        &kp INSERT      &kp END        &trans         &trans
+                        &trans          &mkp MB3        &mkp MB2         &mkp MB1         &trans  &trans              &trans          &trans
             >;
         };
 
         num_layer {
             bindings = <
-&kp ESCAPE  &kp F9  &kp F10       &kp F11  &kp F12  &kp LA(F4)                  &kp K_CALC  &kp N7        &kp N8        &kp N9        &kp KP_MULTIPLY  &kp KP_DIVIDE
-&trans      &kp F5  &kp F6        &kp F7   &kp F8   &kp DEL                     &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS         &kp MINUS
-&trans      &kp F1  &kp F2        &kp F3   &kp F4   &kp LC(FSLH)                &kp EQUAL   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD       &trans
-            &trans  &kp LEFT_WIN  &trans   &trans                 &kp NUMBER_0              &trans        &trans        &trans
+&kp ESCAPE  &kp F9  &kp F10  &kp F11       &kp F12  &kp LA(F4)                  &kp K_CALC  &kp N7        &kp N8        &kp N9        &kp KP_MULTIPLY  &kp KP_DIVIDE
+&trans      &kp F5  &kp F6   &kp F7        &kp F8   &kp DEL                     &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS         &kp MINUS
+&trans      &kp F1  &kp F2   &kp F3        &kp F4   &kp LC(FSLH)                &kp EQUAL   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD       &trans
+                    &trans   &kp LEFT_WIN  &trans   &trans        &kp NUMBER_0  &trans      &trans        &trans
             >;
         };
 
@@ -72,7 +71,7 @@
 &trans  &trans  &kp LG(LC(F4))    &kp LG(TAB)  &kp LG(LC(D))      &trans          &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &trans                &trans
 &trans  &trans  &kp LG(LC(LEFT))  &kp LG(D)    &kp LG(LC(RIGHT))  &trans          &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp GREATER_THAN      &kp TILDE
 &trans  &trans  &trans            &trans       &trans             &trans          &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans     &kp NON_US_BACKSLASH  &trans
-                &trans            &trans       &trans            &trans         &trans          &trans                &trans           &trans
+                &trans            &trans       &trans             &trans  &trans  &trans  &trans                &trans
             >;
         };
     };
