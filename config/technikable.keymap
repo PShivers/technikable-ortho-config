@@ -4,12 +4,11 @@
  * SPDX-License-Identifier: MIT
  */
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20  
-
 #include <dt-bindings/zmk/pointing.h>
 
 #define BAS_L 0
@@ -41,9 +40,9 @@
         base_layer {
             label = "Base";
             bindings = <
-&kp TAB    &kp W  &kp L     &kp Y     &kp P  &kp B                                   &kp Z  &kp F   &kp O      &kp U    &kp SEMI  &kp DEL
-&kp BSPC   &kp C  &kp R     &kp S     &kp T  &kp G                                   &kp M  &kp N   &kp E      &kp I    &kp A     &kp SQT
-&kp LSHFT  &kp Q  &kp J     &kp V     &kp D  &kp K                                   &kp X  &kp H   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&kp TAB    &kp Q  &kp W     &kp F     &kp P  &kp B                                   &kp J  &kp L   &kp U      &kp Y    &kp SEMI  &kp DEL
+&kp BSPC   &kp A  &kp R     &kp S     &kp T  &kp G                                   &kp M  &kp N   &kp E      &kp I    &kp O     &kp SQT
+&kp LSHFT  &kp Z  &kp X     &kp C     &kp D  &kp V                                   &kp K  &kp H   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                   &kp LGUI  &kp LALT  &mo 1  &mt LEFT_CONTROL SPACE  &lt 3 KP_ENTER  &mo 2  &trans  &trans
             >;
         };
