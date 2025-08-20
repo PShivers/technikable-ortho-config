@@ -66,7 +66,7 @@
         sym_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &kp LBKT      &kp RBKT      &kp MINUS  &kp SEMI    &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &kp LS(LPAR)  &kp LS(RPAR)  &kp EQUAL  &kp LS(GT)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &kp LS(LPAR)  &kp LS(RPAR)  &kp EQUAL  &kp LS(GT)  &kp GRAVE
 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &kp LS(LBRC)  &kp LS(RBRC)  &kp DOT    &kp BSLH    &kp DOWN
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans
             >;
