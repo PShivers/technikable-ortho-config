@@ -40,7 +40,7 @@
         };
 
         volume_up {
-            bindings = <&kp K_VOLUME_UP>;
+            bindings = <&kp C_VOLUME_UP>;
             key-positions = <15 16>;
         };
 
