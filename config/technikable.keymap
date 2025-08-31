@@ -49,17 +49,17 @@
 &kp TAB    &kp Q  &kp W     &kp F     &kp P  &kp B                                   &kp J  &kp L   &kp U      &kp Y    &kp SEMI  &kp DEL
 &kp BSPC   &kp A  &kp R     &kp S     &kp T  &kp G                                   &kp M  &kp N   &kp E      &kp I    &kp O     &kp SQT
 &kp LSHFT  &kp Z  &kp X     &kp C     &kp D  &kp V                                   &kp K  &kp H   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                  &kp LGUI  &kp LALT  &mo 1  &mt LEFT_CONTROL SPACE  &lt 3 KP_ENTER  &mo 2  &trans  &tog 4
+                  &kp LGUI  &kp LALT  &mo 1  &mt LEFT_CONTROL SPACE  &lt 3 KP_ENTER  &mo 2  &trans  &mo 4
             >;
         };
 
         num_layer {
             label = "Num";
             bindings = <
-&kp ESC  &kp F9  &kp F10  &kp F11                 &kp F12  &trans                     &trans  &kp N7        &kp N8  &kp N9  &trans  &trans
-&trans   &kp F5  &kp F6   &kp F7                  &kp F8   &kp DEL                    &trans  &kp NUMBER_4  &kp N6  &kp N6  &trans  &trans
-&trans   &kp F1  &kp F2   &kp F3                  &kp F4   &kp RC(SLASH)              &trans  &kp N1        &kp N2  &kp N3  &trans  &trans
-                 &trans   &kp LC(LG(LEFT_ARROW))  &trans   &kp LC(LG(RIGHT))  &trans  &kp N0  &trans        &trans
+&kp ESC  &kp F9  &kp F10  &kp F11                 &kp F12  &trans                        &trans  &kp N7        &kp N8  &kp N9  &trans  &trans
+&trans   &kp F5  &kp F6   &kp F7                  &kp F8   &kp DEL                       &trans  &kp NUMBER_4  &kp N6  &kp N6  &trans  &trans
+&trans   &kp F1  &kp F2   &kp F3                  &kp F4   &kp RC(SLASH)                 &trans  &kp N1        &kp N2  &kp N3  &trans  &trans
+                 &trans   &kp LC(LG(LEFT_ARROW))  &trans   &kp LC(LG(RIGHT))  &kp ENTER  &kp N0  &trans        &trans
             >;
         };
 
